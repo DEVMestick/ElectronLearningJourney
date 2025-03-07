@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("node:path");
 
 function createWindow() {
@@ -14,7 +14,11 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  createWindow();
+  ipcMain.handle("username", () => "[DEV]Mestik");
+
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createWindow();
+  }
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
