@@ -1,0 +1,23 @@
+{
+  "name": "electronlearningjourney",
+  "version": "1.0.0",
+  "description": "Este repositório é dedicado ao aprendizado do curso **\"Curso completo Electron para aprender a criar aplicativos de desktop multiplataforma usando HTML, JavaScript, CSS, React\"** ministrado por **Matheus Fraga**.",
+  "main": "main.js",
+  "scripts": {
+    "start": "Electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEVMestick/ElectronLearningJourney.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEVMestick/ElectronLearningJourney/issues"
+  },
+  "homepage": "https://github.com/DEVMestick/ElectronLearningJourney#readme",
+  "devDependencies": {
+    "electron": "^35.0.0"
+  }
+}
