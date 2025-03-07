@@ -14,7 +14,10 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  ipcMain.handle("username", () => "[DEV]Mestik");
+  ipcMain.handle("username", (event, name) => {
+    console.log("Username: ", name);
+    return "Welcome " + name;
+  });
 
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
