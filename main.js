@@ -3,13 +3,21 @@ const path = require("node:path");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 720,
+    resizable: false,
+    maximizable: false,
+    // alwaysOnTop: true,
+    // minWidth: 800,
+    // minHeight: 600,
+    // maxWidth: 1600,
+    // maxHeight: 900,
+
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-
+  win.setMenu(null);
   win.loadFile("index.html");
 }
 
